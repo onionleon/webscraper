@@ -13,7 +13,7 @@ class Scraper:
     def strip_name(self, course: str) -> str:
         """ 
         Removes session type labels from the course name
-        
+
         Args:
             course: A string containing the course name and possibly additional 
                 labels and numeric information.
@@ -77,7 +77,7 @@ class Scraper:
         None
 
     """
-        workbook = xlsxwriter.Workbook(f"{file_name}.xslx")
+        workbook = xlsxwriter.Workbook(f"files/{file_name}.xlsx")
         worksheet = workbook.add_worksheet()
 
         bold = workbook.add_format({'bold': True})
@@ -96,9 +96,3 @@ class Scraper:
             row += 1
         
         workbook.close()
-
-
-scraper = Scraper()
-scraper.get_courses_with_description(url="https://ucalendar.uwaterloo.ca/2324/COURSE/course-MATH.html")
-
-        

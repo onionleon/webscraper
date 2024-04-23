@@ -20,10 +20,9 @@ def main():
 
     scraper = Scraper()
 
-    for url in url_list:
-        scraper.get_courses_with_description(url=url)
+    scraper.get_courses_with_description(url_list[8])
     
-    scraper.write_to_file()
+    scraper.write_to_file("mthel")
 
     # Not tested yet
 

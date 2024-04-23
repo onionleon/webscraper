@@ -1,1 +1,5 @@
-from scraper_class import *
+from .scraper_class import Scraper  
+
+__all__ = [
+    "Scraper"
+]
